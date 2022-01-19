@@ -103,9 +103,9 @@ Navigation Bar
                 <a href="../index.html">Xie Ran</a></li>
               <li class="masthead__menu-item">
                 <a href="../projects.html">Projects</a></li>
-              <li class="masthead__menu-item">
-                <li class="masthead__menu-item">
-                <a href="./experience.html">Experience</a></li>
+              <!--<li class="masthead__menu-item">-->
+                <!--<li class="masthead__menu-item">-->
+                <!--<a href="./experience.html">Experience</a></li>-->
               <li class="masthead__menu-item">
                 <a href="../doc/CV.pdf">CV</a></li>
             </ul>
@@ -166,10 +166,10 @@ Personal Information test
         <div class="list__item">
           <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
             <h2 class="archive__item-title" itemprop="headline">
-              ✷房产管家一期
+              ✷云享医购一期
             </h2>
             <p class="page__meta">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>2021.08 - 2021.12
+              <i class="fa fa-clock-o" aria-hidden="true"></i>2021.01 - 2021.12
             </p>
             <p class="archive__item-excerpt" itemprop="description"></p>
             <p>
@@ -177,15 +177,16 @@ Personal Information test
             </p>
             <p>
                 <li>项目描述：<br />
-            房产管家是公司自研的手机端 APP 移动办公平台，用户只需要安装手机客户端 APP，即可实时 查看 房地产各个项目的开发进度、销售进度、房源信息等，提供计划节点严重滞后时的手机报警等功能； 相应的，公 司 web 页面点击量大量增加，需要搭建新的 WEB 服务均衡负载性集群才能应对用户大量访问需 求，根据甲方 要求，基于 Docker、k8s 技术以半容器化的方案部署 WEB 均衡负载性集群，前端 WEB 服务器 集群基于 100 台物理机(node 节点)启动 500 个 Apache 实例，后端 20 台 Mysql 集群采用全物理机的方案，负载均衡性集群 采用 4 层+7 层+4 层的调度方案。</li>
-
+                  项目背景：本项目一期主要为甲方医疗生产企业创建并管理半容器化的私有云平台，以 Kubernetes 底层管理平台，将公 司的不同业务拆分为多个业务集群，更加高效的服务于公司的业务。 项目描述：主要由 Kubernetes 集群部署、
+                  日志收集服务EFK、监控服务（Prometheus和Zaabix）、仪表盘Dashboard 、私有仓库Harbor等组成。
             <li>主要职责：<br />
-              1. 镜像准备，编写 Dockerfile 文件，将公司项目及 lamp 环境打包封装，制作基础镜像； <br />
-              2. 配合开发完成应用上云之前的测试工作；<br />
-              3. 管理公司 Harbor 私有镜像仓库，严格做好每个镜像版本的备份工作； <br />
-              4. k8s 平台的后期维护，通过 Promethues 监控 k8s 集群的资源使用情况； <br />
-              5. 处理客户和业务的的需求，完成项目实例的资源扩缩容； <br />
-              6. 配合开发人员完成应用的滚动升级和回滚等。<br />
+            1、负责日常维护集群和PAAS平台；<br/>
+            2、负责Prometheus监控资源池的计算资源，存储资源，网络资源、容器状态等；<br/>
+            3、负责业务方面使用Zabbix监控业务流量，业务访问量，每个服务节点的CPU、内存、磁盘i/o等相关性能；<br/>
+            4、负责处理故障主机的节点，实例的迁移，资源池的使用率和分配率的信息收集，参与优化方案制定；<br/>
+            5、检测系统发生故障，及时对故障进行定位和修复，严重问题及时上报； <br/>
+            6、处理客户和业务的的需求，完成项目实例的资源扩缩容；<br/>
+            7、保证系统和节点服务的7*24小时运转。<br/>
             </li>
 
            </p>
@@ -196,10 +197,10 @@ Personal Information test
         <div class="list__item">
           <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
             <h2 class="archive__item-title" itemprop="headline">
-              ✷果蔬商超二期
+              ✷志云听曲志 app优化
             </h2>
             <p class="page__meta">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>2021.3 - 2021.07
+              <i class="fa fa-clock-o" aria-hidden="true"></i>2021.9 - 2021.12
             </p>
             <p class="archive__item-excerpt" itemprop="description"></p>
             <p>
@@ -207,15 +208,20 @@ Personal Information test
             </p>
             <p>
                 <li>项目描述：<br/>
-            随着甲方房地产项目的扩建，业务量不断扩大，预计现有的 Mysql 服务集群无法满足大量数据的同时 写入和检索需求，公司决定扩展现有的 Mysql 集群，并增设 Redis 集群作为 Mysql 数据缓存。
+            项目背景：随着使用的用户逐渐增多，服务器负载过高，尤其用户访问的高峰期，
+            网页加载慢，所以对原有的LAMP架 构模式进行升级、同时对大量数据安全性的保障，
+            服务器架构单点故障等问题进行优化。 项目描述： 基于LVS +Keepalived 实现集群的高可用，
+            使用Nginx 做反向代理和动静分离，利用 Zabbix 对集群进行监控 ；
+            存储采用 MFS 分布式文件系统 ；MySQL 主从搭建，搭建Redis缓存服务器减轻压力。
           </li>
             <li>主要职责： <br/>
-              1. Mysql 主从搭建，将新增服务器节点配置为原有 Mysql 主服务器的从服务器，实现主从复制； <br/>
-              2. Amoeba 中间件配置，将新增的 Mysql 服务器加入原有的集群，并实现数据读写分离；  <br/>
-              3. 参与 Redis 集群搭建，完成 Redis 主从配置；  <br/>
-              4. 配置 Zabbix 自动发现功能，将新增物理节点自动加入监控；  <br/>
-              5. 使用 Rsync+inotify 实现数据实时同步，完成数据库的备份工作；  <br/>
-              6. 后期负责监控、维护。</li>
+              1、日常监控系统的性能，针对业务的需求进行监控项的增减和调整；<br/>
+              2、定期进行数据备进行备份，保障客户数据的安全； <br/>
+              3、负责集群的监控数据，进行天级和周级分析，将问题上报；<br/>
+              4、 处理客户和业务的的需求，完成服务的升级； <br/>
+              5、辅助DBA对数据节点增加，部署数据库的读写分离/主从；<br/>
+              6、对备份数据进行周期性测试，保证备份数据的可用性； <br/>
+              7、保证集群的高可用性能，服务器的7*24小时正常运转；<br/>
            </p>
             <p></p>
           </article>
